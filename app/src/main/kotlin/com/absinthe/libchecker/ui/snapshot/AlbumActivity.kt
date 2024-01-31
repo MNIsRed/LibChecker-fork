@@ -171,6 +171,7 @@ class AlbumActivity : BaseActivity<ActivityAlbumBinding>() {
     titleRes: Int,
     subtitleRes: Int
   ): AlbumItemView = AlbumItemView(ContextThemeWrapper(this, R.style.AlbumMaterialCard)).apply {
+    //如果确定父布局支持Margin，确实不用指定LinearLayout或者ConstraintLayout，使用MarginLayoutParams能避免一点出错的可能
     layoutParams = ViewGroup.MarginLayoutParams(
       ViewGroup.LayoutParams.MATCH_PARENT,
       ViewGroup.LayoutParams.WRAP_CONTENT
